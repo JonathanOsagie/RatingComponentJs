@@ -1,0 +1,159 @@
+/* $white: hsl(0, 0%, 100%);
+$orange: hsl(25, 97%, 53%);
+$lightGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$mediumGrey: hsl(216, 12%, 54%);
+
+$screenMarginLeft: auto;
+$screenMarginRight: auto;
+$width:300px;
+
+$rounded: 12px;
+$top: 30px; */
+
+body {
+  background-color: hsl(216, 12%, 8%);
+}
+
+p {
+  font-size: 14px;
+  color: hsl(216, 12%, 54%);
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+.rateScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.thanksScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width:300px;
+  padding: 32px;
+  margin: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 8%);
+}
+
+.circles{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.submitButton {
+  margin-top: 30px;
+  height: 30px;
+  border-radius: 12px;
+  border: none;
+  color: hsl(25, 97%, 53%);
+}
+
+.submitButton:hover {
+  color:white;
+  background-color: hsl(25, 97%, 53%);
+}
+
+.ratingOutput {
+  background-color: hsl(216, 12%, 8%);
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px;
+  height:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(25, 97%, 53%);
+  /* p {
+    color: hsl(25, 97%, 53%);
+  } */
+}
+
+#rate{
+  color: hsl(25, 97%, 53%);
+}
+/* 
+
+$white: hsl(0, 0%, 100%);
+$hsl(25, 97%, 53%): hsl(25, 97%, 53%);
+$lightGrey: hsl(217, 12%, 63%);
+$DarkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$mediumGrey: hsl(216, 12%, 54%); */
+
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(216, 12%, 54%);
+}
+
+.btn-circle:hover{
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.btn-active {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+}
+
+.btn-circle.circles-selected{
+  background-color:  hsl(216, 12%, 54%);
+  color: white;
+}
+
+/* 
+// .buttonColorUnselected {
+//     background-color: $veryDarkBlue;
+
+//     p {
+//         color: $lightGrey;
+//     }
+// } */
+
+/* 
+// input:checked+.rateButton {
+//     color: $white;
+//     background-color: $mediumGrey;
+// }
+
+// input {
+//     display: none;
+// } */
