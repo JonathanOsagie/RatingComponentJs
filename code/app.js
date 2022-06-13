@@ -1,15 +1,11 @@
 var rated = 0;
 var buttons = document.body.getElementsByClassName('btn-circle');
+var currentBtn;
+var i = 0;
 
-for (var i = 0; i < buttons.length; i++) {
-    var currentBtn = buttons.item(i);
-    // currentBtn.addEventListener("click", function () {
-    //     ratingHandler(i,currentBtn)})
-    currentBtn.addEventListener("click", function () {
-        controlVariable(i, currentBtn)
-    })
-    console.log(buttons.item(i));
-
+for (const button of buttons) {
+     button.addEventListener("click", function () {
+         ratingHandler(button.innerHTML, button)})
 }
 
 function submitHandler() {
@@ -21,29 +17,17 @@ function submitHandler() {
     }
 }
 
-function controlVariable(givenValue,btnPressed) {
-    console.log(givenValue)
-}
-
 function ratingHandler(ratingValue, currentBtnSelected) {
-    console.log()
     if (rated === ratingValue) {
         rated = 0;
-        // document.getElementById(ratingValue).style.backgroundColor = 'hsl(216, 12%, 8%)'; //lightgray
-        currentBtn.classList.remove('circles-selected')
-        //document.getElementById(ratingValue).classList.remove('circles-selected');
+        currentBtnSelected.classList.remove('circles-selected')
     } else {
-        console.log(currentBtnSelected);
-
         rated = ratingValue;
         currentBtnSelected.classList.add('circles-selected');
-        //document.getElementById(ratingValue).classList.add('circles-selected');
-        for (var i = 0; i < buttons.length; i++) {
-            if (ratingValue != i) {
-                currentBtn.classList.remove('circles-selected');
-                //document.getElementById(b).classList.remove('circles-selected');
+        for (const button of buttons) {
+            if (ratingValue != button.innerHTML) {
+                button.classList.remove('circles-selected');
             }
         }
     }
-    //if(ratingValue Active) => remove color; if (ratingValue isNotActive) => give color, remove color from
 }
